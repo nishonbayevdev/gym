@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block base %}
+<div class="vh-100">
+    <div class="request">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Rqueste a call back</h2>
+                     <span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered a</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-6 offset-3">
+                  <form action="{% url 'signup' %}" method="post" id="request" class="main_form" >
+                      {% csrf_token %}
+                     <div class="row">
+                         <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Fullname" type="text" name="fullname" required>
+                        </div>
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Username" type="text" name="userame" required>
+                        </div>
+                         <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Email" type="email" name="email" required>
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder=" Password" type="password" name="password" required>
+                        </div>
+                        <div class="col-sm-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+</div>
+
+{% endblock %}
